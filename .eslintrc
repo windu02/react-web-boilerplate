@@ -1,0 +1,30 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+  },
+  "plugins": [
+    "react",
+    "flowtype"
+  ],
+  "globals": {
+    "FormData": false,
+    "navigator": false,
+    "window": false,
+    "document": false
+  },
+  "extends" : ["airbnb"],
+  "rules": {
+    "max-len": ["error", 200, { "ignoreStrings": true }],
+    "import/no-unresolved": ["error", { "ignore": ["\\.(png)$"] }],
+    "object-curly-newline": ["error", { "multiline": true, "minProperties": 6, "consistent": true }],
+    "no-nested-ternary": ["off"],
+    "react/destructuring-assignment": ["off"],
+    "react/forbid-foreign-prop-types": ["off"],
+    "react/jsx-filename-extension": ["off"],
+    "react/prefer-stateless-function": ["off"],
+    "react/prop-types": ["error", { "ignore": ["t", "locale", "setLocale"] }],
+    "semi": ["error", "never"],
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }]
+  }
+}

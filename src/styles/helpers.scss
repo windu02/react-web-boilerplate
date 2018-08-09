@@ -1,0 +1,43 @@
+/* To keep empty selector during SASS compilation */
+@mixin keepEmpty() {
+  /*! keep */
+}
+
+/* Center an element vertically and horizontally */
+@mixin absoluteHorizontalVerticalCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Center Text vertically and horizontally */
+@mixin absoluteHorizontalVerticalTextCenter() {
+  @include absoluteHorizontalVerticalCenter();
+  width: 100%;
+  text-align: center;
+}
+
+/* Element take full width and calculated height based on ratio */
+@mixin useRatio($ratio) {
+  position: relative;
+  width: 100%;
+  padding-bottom: (100% / $ratio);
+}
+
+/* Element take full width and height in an absolute way */
+@mixin absoluteFullSpace() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* Choose light or dark color dealing with $color in param */
+@function lightOrDarkColor($lightColor, $darkColor, $color) {
+  @if (lightness($color) > 50) {
+    @return $darkColor; // Lighter background, return dark color
+  } @else {
+    @return $lightColor; // Darker background, return light color
+  }
+}

@@ -1,0 +1,98 @@
+$smMin: 600px;
+$mdMin: 960px;
+$lgMin: 1280px;
+$xlMin: 1920px;
+
+@mixin respondTo($media) {
+  @if $media == sm {
+    @media only screen and (min-width: $smMin) {
+      @content;
+    }
+  }
+  @else if $media == md {
+    @media only screen and (min-width: $mdMin) {
+      @content;
+    }
+  }
+  @else if $media == lg {
+    @media only screen and (min-width: $lgMin) {
+      @content;
+    }
+  }
+  @else if $media == xl {
+    @media only screen and (min-width: $xlMin) {
+      @content;
+    }
+  }
+}
+
+@mixin strictlyRespondTo($media) {
+  @if $media == sm {
+    @media only screen and (min-width: $smMin) and (max-width: $mdMin - 1) {
+      @content;
+    }
+  }
+  @else if $media == md {
+    @media only screen and (min-width: $mdMin) and (max-width: $lgMin - 1) {
+      @content;
+    }
+  }
+  @else if $media == lg {
+    @media only screen and (min-width: $lgMin) and (max-width: $xlMin - 1) {
+      @content;
+    }
+  }
+  @else if $media == xl {
+    @media only screen and (min-width: $xlMin) {
+      @content;
+    }
+  }
+}
+
+@mixin sm() {
+  @include respondTo(sm) {
+    @content;
+  }
+}
+
+@mixin md() {
+  @include respondTo(md) {
+    @content;
+  }
+}
+
+@mixin lg() {
+  @include respondTo(lg) {
+    @content;
+  }
+}
+
+@mixin xl() {
+  @include respondTo(xl) {
+    @content;
+  }
+}
+
+@mixin strictlySm() {
+  @include strictlyRespondTo(sm) {
+    @content;
+  }
+}
+
+@mixin strictlyMd() {
+  @include strictlyRespondTo(md) {
+    @content;
+  }
+}
+
+@mixin strictlyLg() {
+  @include strictlyRespondTo(lg) {
+    @content;
+  }
+}
+
+@mixin strictlyXl() {
+  @include strictlyRespondTo(xl) {
+    @content;
+  }
+}

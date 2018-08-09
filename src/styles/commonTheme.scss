@@ -1,0 +1,18 @@
+@import './commonColors';
+
+/* COLORS DEFINITIONS */
+$primaryColor: $windu02Purple !default;
+$secondaryColor: $windu02Grey !default;
+
+/* GLOBAL */
+$backgroundColor: $white !default;
+$linkColor: $primaryColor !default;
+$linkHoverColor: $secondaryColor !default;
+$buttonColor: $primaryColor !default;
+$buttonHoverColor: $secondaryColor !default;
+
+$coverRatio: 2.56 !default;
+$squareRatio: 1 !default;
+
+$globalMarginSize: 1rem !default;
+$globalPaddingSize: 1rem !default;
