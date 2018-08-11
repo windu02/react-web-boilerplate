@@ -14,7 +14,7 @@ const mapDispatchToProps = dispatch => ({
   setLocale: locale => dispatch(I18NActions.setLocale(locale)),
 })
 
-export const withI18N = WrappedComponent => (
+export default WrappedComponent => (
   connect(mapStateToProps, mapDispatchToProps)(
     class WithI18N extends PureComponent {
       static propTypes = {
@@ -39,5 +39,3 @@ export const withI18N = WrappedComponent => (
     },
   )
 )
-
-export default withI18N

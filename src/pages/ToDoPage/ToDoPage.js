@@ -3,7 +3,8 @@ import { connect } from 'react-redux'
 
 import PropTypes from 'prop-types'
 
-import { withI18N } from '../../hoc/withI18N'
+import withI18N from '../../hoc/withI18N'
+import page from '../../hoc/page'
 
 import { selectors as NavigationSelectors } from '../../redux/Navigation/redux'
 
@@ -11,6 +12,7 @@ const mapStateToProps = state => ({
   pathname: NavigationSelectors.pathname(state),
 })
 
+@page
 @withI18N
 @connect(mapStateToProps)
 class ToDoPage extends PureComponent {

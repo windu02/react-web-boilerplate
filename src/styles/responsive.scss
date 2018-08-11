@@ -1,26 +1,31 @@
-$smMin: 600px;
-$mdMin: 960px;
-$lgMin: 1280px;
-$xlMin: 1920px;
+$smMinPx: 600px;
+$mdMinPx: 960px;
+$lgMinPx: 1280px;
+$xlMinPx: 1920px;
+
+$smMin: 60rem;
+$mdMin: 96rem;
+$lgMin: 128rem;
+$xlMin: 192rem;
 
 @mixin respondTo($media) {
   @if $media == sm {
-    @media only screen and (min-width: $smMin) {
+    @media only screen and (min-width: $smMinPx) {
       @content;
     }
   }
   @else if $media == md {
-    @media only screen and (min-width: $mdMin) {
+    @media only screen and (min-width: $mdMinPx) {
       @content;
     }
   }
   @else if $media == lg {
-    @media only screen and (min-width: $lgMin) {
+    @media only screen and (min-width: $lgMinPx) {
       @content;
     }
   }
   @else if $media == xl {
-    @media only screen and (min-width: $xlMin) {
+    @media only screen and (min-width: $xlMinPx) {
       @content;
     }
   }
@@ -28,26 +33,27 @@ $xlMin: 1920px;
 
 @mixin strictlyRespondTo($media) {
   @if $media == sm {
-    @media only screen and (min-width: $smMin) and (max-width: $mdMin - 1) {
+    @media only screen and (min-width: $smMinPx) and (max-width: $mdMinPx - 1) {
       @content;
     }
   }
   @else if $media == md {
-    @media only screen and (min-width: $mdMin) and (max-width: $lgMin - 1) {
+    @media only screen and (min-width: $mdMinPx) and (max-width: $lgMinPx - 1) {
       @content;
     }
   }
   @else if $media == lg {
-    @media only screen and (min-width: $lgMin) and (max-width: $xlMin - 1) {
+    @media only screen and (min-width: $lgMinPx) and (max-width: $xlMinPx - 1) {
       @content;
     }
   }
   @else if $media == xl {
-    @media only screen and (min-width: $xlMin) {
+    @media only screen and (min-width: $xlMinPx) {
       @content;
     }
   }
 }
+
 
 @mixin sm() {
   @include respondTo(sm) {
