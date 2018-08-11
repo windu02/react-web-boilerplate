@@ -1,5 +1,7 @@
 import { all, call, fork, take } from 'redux-saga/effects'
 
+import * as ReduxPersistConstants from 'redux-persist/lib/constants'
+
 import { persist as persistConfig } from '../config'
 
 import * as AppSagas from './App/sagas'
@@ -23,7 +25,7 @@ function* loop() {
 
 export default function* rootSaga() {
   if (persistConfig.VERSION !== 'false' && persistConfig.VERSION !== null) {
-    yield take('persist/REHYDRATE')
+    yield take(ReduxPersistConstants.REHYDRATE)
   }
   yield fork(loop)
   yield fork(I18NSagas.init)
