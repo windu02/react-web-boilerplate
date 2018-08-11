@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { withI18N } from '../../hoc/withI18N'
 
@@ -11,7 +12,10 @@ class NotFoundPage extends PureComponent {
 
     return (
       <div className={styles.wrapper}>
-        { t('not_found.content') }
+        <FontAwesomeIcon icon="exclamation-triangle" className={styles.icon} />
+        <span className={styles.message}>
+          { t('not_found.content') }
+        </span>
       </div>
     )
   }

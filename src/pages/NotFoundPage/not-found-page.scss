@@ -1,5 +1,13 @@
-@import 'helpers';
+@import 'theme';
 
 .wrapper {
-  @include keepEmpty();
+  padding: 1rem;
+}
+
+.icon {
+  color: $warn;
+}
+
+.message {
+  margin-left: 1rem;
 }
