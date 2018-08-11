@@ -1,0 +1,27 @@
+@import 'responsive';
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 100%;
+
+  @include sm() {
+    max-width: $smMin - 8rem;
+  }
+
+  @include md() {
+    max-width: $mdMin - 12rem;
+  }
+
+  @include lg() {
+    max-width: $lgMin - 25.6rem;
+  }
+
+  @include xl() {
+    max-width: $xlMin - 32rem;
+  }
+}
