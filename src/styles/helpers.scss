@@ -3,20 +3,6 @@
   /*! keep */
 }
 
-/* Center an element vertically and horizontally */
-@mixin absoluteHorizontalVerticalCenter() {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Center Text vertically and horizontally */
-@mixin absoluteHorizontalVerticalTextCenter() {
-  @include absoluteHorizontalVerticalCenter();
-  width: 100%;
-  text-align: center;
-}
-
 /* Element take full width and calculated height based on ratio */
 @mixin useRatio($ratio) {
   position: relative;
