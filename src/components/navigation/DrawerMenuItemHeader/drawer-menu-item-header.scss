@@ -1,0 +1,14 @@
+@import 'theme';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+
+  .icon {
+    color: $black;
+
+    &.active {
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import 'helpers';
+@import 'responsive';
+
+$StickyHeaderHeightXL: 10rem;
+$StickyHeaderHeightLG: 9rem;
+$StickyHeaderHeightMD: 8rem;
+$StickyHeaderHeightSM: 7rem;
+$StickyHeaderHeightXS: 7rem;
+
+@keyframes toStickyPosition {
+  from {
+    top: -100%;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
+.wrapper {
+  @include keepEmpty();
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 1100;
+  width: 100%;
+
+  animation-duration: 1s;
+  animation-name: toStickyPosition;
+
+  height: $StickyHeaderHeightXS;
+}
+
+
+@include strictlySm() {
+  .sticky {
+    height: $StickyHeaderHeightSM;
+  }
+}
+
+@include strictlyMd() {
+  .sticky {
+    height: $StickyHeaderHeightMD;
+  }
+}
+
+@include strictlyLg() {
+  .sticky {
+    height: $StickyHeaderHeightLG;
+  }
+}
+
+@include strictlyXl() {
+  .sticky {
+    height: $StickyHeaderHeightXL;
+  }
+}

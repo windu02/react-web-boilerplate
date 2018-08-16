@@ -1,0 +1,25 @@
+@import 'theme';
+
+.wrapper {
+  background-color: $primary !important;
+}
+
+.menuIcon {
+  color: $white;
+}
+
+.logoWrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .logo {
+    width: 10rem;
+  }
+}
+
+.avatar {
+  width: 3.5rem;
+  height: 3.5rem;
+}

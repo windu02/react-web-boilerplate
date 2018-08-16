@@ -12,6 +12,7 @@ import rootSaga from './sagas'
 
 import * as AppRedux from './App/redux'
 import * as AuthRedux from './Auth/redux'
+import * as DrawerMenuRedux from './DrawerMenu/redux'
 import * as I18NRedux from './I18N/redux'
 import * as WSRedux from './WS/redux'
 
@@ -24,6 +25,7 @@ import pagesEntities from '../pages/redux'
 const entities = {
   app: AppRedux,
   auth: AuthRedux,
+  drawerMenu: DrawerMenuRedux,
   i18n: I18NRedux,
   ws: WSRedux,
 

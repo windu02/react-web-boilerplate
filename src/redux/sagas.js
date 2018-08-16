@@ -6,6 +6,7 @@ import { persist as persistConfig } from '../config'
 
 import * as AppSagas from './App/sagas'
 import * as AuthSagas from './Auth/sagas'
+import * as DrawerMenuSagas from './DrawerMenu/sagas'
 import * as I18NSagas from './I18N/sagas'
 import * as NavigationSagas from './Navigation/sagas'
 import * as WSSagas from './WS/sagas'
@@ -19,6 +20,7 @@ function* loop() {
   yield all([
     AppSagas.loop(),
     AuthSagas.loop(),
+    DrawerMenuSagas.loop(),
     I18NSagas.loop(),
     NavigationSagas.loop(),
     WSSagas.loop(),

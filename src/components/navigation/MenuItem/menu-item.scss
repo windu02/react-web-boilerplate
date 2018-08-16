@@ -1,0 +1,33 @@
+@import 'theme';
+@import 'helpers';
+
+.wrapper {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  cursor: pointer;
+
+  .hoverPicture {
+    @include useRatio(1);
+  }
+
+  .title {
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+
+    color: $primary;
+
+    &.active {
+      color: $green;
+    }
+  }
+
+  &:hover {
+    .title {
+      color: $green;
+    }
+  }
+}

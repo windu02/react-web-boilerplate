@@ -1,0 +1,26 @@
+@import 'responsive';
+
+.wrapper, .content, .item {
+  height: 100%;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+
+  .avatar {
+    width: 100%;
+
+    @include md() {
+      width: 70%;
+    }
+
+    @include lg() {
+      width: 65%;
+    }
+
+    @include xl() {
+      width: 60%;
+    }
+  }
+}

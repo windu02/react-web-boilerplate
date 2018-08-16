@@ -1,0 +1,42 @@
+@import 'theme';
+@import 'helpers';
+@import 'responsive';
+
+$HeaderHeightXL: 14rem;
+$HeaderHeightLG: 13rem;
+$HeaderHeightMD: 12rem;
+$HeaderHeightSM: 11rem;
+$HeaderHeightXS: 9rem;
+
+.wrapper {
+  @include keepEmpty();
+}
+
+.desktopHeader {
+  height: $HeaderHeightXS;
+  border-bottom: 1px solid $black;
+}
+
+@include strictlySm() {
+  .desktopHeader {
+    height: $HeaderHeightSM;
+  }
+}
+
+@include strictlyMd() {
+  .desktopHeader {
+    height: $HeaderHeightMD;
+  }
+}
+
+@include strictlyLg() {
+  .desktopHeader {
+    height: $HeaderHeightLG;
+  }
+}
+
+@include strictlyXl() {
+  .desktopHeader {
+    height: $HeaderHeightXL;
+  }
+}

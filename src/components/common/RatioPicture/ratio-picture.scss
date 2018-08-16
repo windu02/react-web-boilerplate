@@ -1,0 +1,14 @@
+@import 'helpers';
+
+.wrapper {
+  height: auto;
+  @include useRatio(1);
+}
+
+.picture {
+  @include absoluteFullSpace();
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
