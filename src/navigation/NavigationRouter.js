@@ -19,7 +19,7 @@ import { history } from './History'
 import NotFoundPage from '../pages/NotFoundPage/NotFoundPage'
 import Loading from '../components/common/Loading/Loading'
 
-import routes from './routes'
+import routes from './routesConfig'
 
 const mapStateToProps = state => ({
   locale: I18NSelectors.locale(state),

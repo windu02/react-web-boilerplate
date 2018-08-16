@@ -5,8 +5,10 @@ import * as ReduxPersistConstants from 'redux-persist/lib/constants'
 import { persist as persistConfig } from '../config'
 
 import * as AppSagas from './App/sagas'
+import * as AuthSagas from './Auth/sagas'
 import * as I18NSagas from './I18N/sagas'
 import * as NavigationSagas from './Navigation/sagas'
+import * as WSSagas from './WS/sagas'
 
 import { actions as I18NActions } from './I18N/redux'
 import { actions as NavigationActions } from './Navigation/redux'
@@ -16,8 +18,10 @@ import pagesSagas from '../pages/sagas'
 function* loop() {
   yield all([
     AppSagas.loop(),
+    AuthSagas.loop(),
     I18NSagas.loop(),
     NavigationSagas.loop(),
+    WSSagas.loop(),
 
     ...pagesSagas,
   ])
