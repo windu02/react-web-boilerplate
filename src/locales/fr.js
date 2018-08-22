@@ -1,4 +1,15 @@
 const fr = {
+  navigation: {
+    hello: 'Bonjour',
+    goodbye: 'Au revoir !',
+  },
+
+  hello: {
+    welcome: 'Bonjour et Bienvenue !',
+  },
+  home: {
+    hi: 'Comme à la maison !',
+  },
   not_found: {
     content: 'Je pense que vous êtes perdu...',
   },

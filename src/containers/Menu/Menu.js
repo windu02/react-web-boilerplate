@@ -40,8 +40,6 @@ class Menu extends PureComponent {
         <MenuItem
           onClick={() => navigationPush(menuItem.pathname)}
           title={t(menuItem.titleId)}
-          source={menuItem.picture}
-          hoverSource={menuItem.hoverPicture}
           isActive={pathname.startsWith(menuItem.pathname)}
         />
       </Grid>

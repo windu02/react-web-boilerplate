@@ -8,7 +8,8 @@
     color: $black;
 
     &.active {
-      color: $white;
+      color: $secondaryColor;
+      text-decoration: underline;
     }
   }
 }

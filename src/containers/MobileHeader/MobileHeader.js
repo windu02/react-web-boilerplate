@@ -2,9 +2,13 @@ import React, { Fragment, PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import AppBar from '@material-ui/core/es/AppBar/AppBar'
-import Toolbar from '@material-ui/core/es/Toolbar/Toolbar'
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import IconButton from '@material-ui/core/IconButton'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import ReactLogo from '../../components/common/ReactLogo'
 import DrawerMenu from '../DrawerMenu/DrawerMenu'
 
 import routes from '../../navigation/routes'
@@ -33,7 +37,12 @@ class MobileHeader extends PureComponent {
       <Fragment>
         <AppBar position="static" className={styles.wrapper}>
           <Toolbar>
-            <div>TODO</div>
+            <IconButton onClick={() => toggleDrawerMenu()}>
+              <FontAwesomeIcon icon="bars" className={styles.menuIcon} />
+            </IconButton>
+            <div className={styles.logoWrapper}>
+              <ReactLogo className={styles.logo} onClick={() => navigationPush(routes.home)} />
+            </div>
           </Toolbar>
         </AppBar>
         <DrawerMenu />

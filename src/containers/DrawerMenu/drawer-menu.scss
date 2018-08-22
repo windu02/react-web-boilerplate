@@ -1,4 +1,3 @@
-@import 'theme';
 @import 'helpers';
 
 .wrapper {
@@ -7,20 +6,4 @@
 
 .section {
   width: 25rem;
-}
-
-.subMenu {
-  margin-left: 1.5rem !important;
-}
-
-.cooking {
-  background-color: $cooking !important;
-}
-
-.wine {
-  background-color: $wine !important;
-}
-
-.music {
-  background-color: $music !important;
 }

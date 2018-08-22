@@ -7,11 +7,6 @@
   padding: 0 1.2rem !important;
   margin: 0.5rem 0 !important;
 
-  .iconWrapper {
-    width: 4.8rem;
-    margin-right: 1rem;
-  }
-
   .title {
     flex: 1;
     text-align: left;
@@ -19,10 +14,11 @@
     margin-top: 0.5rem;
     text-transform: uppercase;
 
-    color: $primary;
+    color: $primaryColor;
 
     &.active {
-      color: $white;
+      color: $secondaryColor;
+      text-decoration: underline;
     }
   }
 }

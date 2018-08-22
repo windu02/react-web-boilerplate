@@ -1,19 +1,12 @@
-
 import routes from '../../navigation/routes'
 
 export default {
-  home: {
-    titleId: 'cooking.navigation.home',
-    picture: Cooking,
-    hoverPicture: HoverCooking,
-    pathname: routes.cookingHome,
+  hello: {
+    titleId: 'navigation.hello',
+    pathname: routes.hello,
   },
-  /*
-  cooking: {
-    titleId: 'cooking.navigation.home',
-    picture: Cooking,
-    hoverPicture: HoverCooking,
-    pathname: routes.cookingHome,
+  goodbye: {
+    titleId: 'navigation.goodbye',
+    pathname: routes.goodbye,
   },
-  */
 }

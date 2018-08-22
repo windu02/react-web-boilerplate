@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import Grid from '@material-ui/core/Grid'
 
 import CenteredPageSection from '../../components/layout/CenteredPageSection'
+import ReactLogo from '../../components/common/ReactLogo'
 import Menu from '../Menu'
 
 import styles from './desktop-header.scss'
@@ -29,13 +30,14 @@ class DesktopHeader extends PureComponent {
       <CenteredPageSection className={styles.wrapper}>
         <Grid container alignItems="center" justify="space-between" className={styles.content}>
           <Grid item xs={2} md={1} className={styles.item}>
-            Logo
+            <ReactLogo onClick={() => navigationPush(routes.home)} />
           </Grid>
           <Grid item xs={9} md={7} lg={6} xl={5} className={styles.item}>
             <Menu />
           </Grid>
           <Grid item xs={1} className={styles.item}>
-            User Profile Avatar
+            {/* TODO: Avatar here */}
+            A
           </Grid>
         </Grid>
       </CenteredPageSection>

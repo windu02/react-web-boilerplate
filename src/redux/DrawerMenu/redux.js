@@ -6,7 +6,6 @@ import Immutable from 'seamless-immutable'
 //
 const initialState = Immutable({
   isOpen: false,
-  openedSubMenu: null,
 })
 
 //
@@ -16,7 +15,6 @@ export const actions = {
   toggle: createAction('toggle'),
   open: createAction('open'),
   close: createAction('close'),
-  setOpenedSubMenu: createAction('setOpenedSubMenu', openedSubMenu => ({ openedSubMenu })),
 }
 
 //
@@ -26,7 +24,6 @@ export const reducer = createReducer({
   [actions.toggle]: state => state.merge({ isOpen: !state.isOpen }),
   [actions.open]: state => state.merge({ isOpen: true }),
   [actions.close]: state => state.merge({ isOpen: false }),
-  [actions.setOpenedSubMenu]: (state, { openedSubMenu }) => state.merge({ openedSubMenu }),
 }, initialState)
 
 //
@@ -34,9 +31,7 @@ export const reducer = createReducer({
 //
 const root = state => state.drawerMenu
 const isOpen = state => root(state).isOpen
-const openedSubMenu = state => root(state).openedSubMenu
 
 export const selectors = {
   isOpen,
-  openedSubMenu,
 }

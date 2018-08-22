@@ -6,6 +6,7 @@ import Immutable from 'seamless-immutable'
 //
 const initialState = Immutable({
   started: false,
+  headerIsSticky: false,
 })
 
 //
@@ -13,6 +14,7 @@ const initialState = Immutable({
 //
 export const actions = {
   init: createAction('init'),
+  setHeaderIsSticky: createAction('setHeaderIsSticky', headerIsSticky => ({ headerIsSticky })),
 }
 
 //
@@ -20,6 +22,7 @@ export const actions = {
 //
 export const reducer = createReducer({
   [actions.init]: state => state.merge({ started: true }),
+  [actions.setHeaderIsSticky]: (state, { headerIsSticky }) => state.merge({ headerIsSticky }),
 }, initialState)
 
 //
@@ -27,7 +30,9 @@ export const reducer = createReducer({
 //
 const root = state => state.app
 const started = state => root(state).started
+const headerIsSticky = state => root(state).headerIsSticky
 
 export const selectors = {
   started,
+  headerIsSticky,
 }

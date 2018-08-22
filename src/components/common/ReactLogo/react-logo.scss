@@ -1,0 +1,18 @@
+@import 'helpers';
+
+.wrapper {
+  height: auto;
+  @include useRatio(1);
+}
+
+.logo {
+  @include absoluteFullSpace();
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.clickable {
+  cursor: pointer;
+}

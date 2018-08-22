@@ -2,21 +2,18 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
-import styles from './menu-item.scss'
+import ReactPicture from '../../../assets/images/react_logo.png'
 
-class MenuItem extends PureComponent {
+import styles from './react-logo.scss'
+
+class ReactLogo extends PureComponent {
   static propTypes = {
-    title: PropTypes.string.isRequired,
-    isActive: PropTypes.bool,
-
     onClick: PropTypes.func,
 
     className: PropTypes.string,
   }
 
   static defaultProps = {
-    isActive: false,
-
     onClick: null,
 
     className: '',
@@ -31,22 +28,23 @@ class MenuItem extends PureComponent {
   }
 
   render() {
-    const { isActive, title, className } = this.props
+    const { className, onClick } = this.props
 
     return (
       <div
         role="button"
         tabIndex="-1"
+        className={classnames(styles.wrapper, onClick !== null && styles.clickable, className)}
         onClick={this.handleClick}
         onKeyDown={this.handleClick}
-        className={classnames(styles.wrapper, className)}
       >
-        <div className={classnames(styles.title, isActive && styles.active)}>
-          {title}
-        </div>
+        <div
+          className={styles.logo}
+          style={{ backgroundImage: `url(${ReactPicture})` }}
+        />
       </div>
     )
   }
 }
 
-export default MenuItem
+export default ReactLogo

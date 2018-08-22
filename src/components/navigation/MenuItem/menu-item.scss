@@ -10,24 +10,21 @@
 
   cursor: pointer;
 
-  .hoverPicture {
-    @include useRatio(1);
-  }
-
   .title {
     margin-top: 0.5rem;
     text-transform: uppercase;
 
-    color: $primary;
+    color: $primaryColor;
 
     &.active {
-      color: $green;
+      color: $secondaryColor;
+      text-decoration: underline;
     }
   }
 
   &:hover {
     .title {
-      color: $green;
+      text-decoration: underline;
     }
   }
 }
