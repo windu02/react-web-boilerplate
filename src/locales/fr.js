@@ -1,5 +1,6 @@
 const fr = {
   navigation: {
+    home: 'Accueil',
     hello: 'Bonjour',
     goodbye: 'Au revoir !',
   },

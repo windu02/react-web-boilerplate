@@ -1,0 +1,25 @@
+@import 'theme';
+
+.wrapper {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  margin: 1rem;
+
+  color: $purple;
+
+  &:hover {
+    color: $black;
+    cursor: pointer;
+  }
+
+  &.active {
+    color: $darken-grey;
+  }
+}

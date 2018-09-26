@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
+import Menu from '../../../containers/Menu'
+
 import styles from './page.scss'
 
 class Page extends PureComponent {
@@ -13,6 +15,7 @@ class Page extends PureComponent {
 
     return (
       <div className={styles.wrapper}>
+        <Menu />
         <div className={styles.content}>
           {children}
         </div>
