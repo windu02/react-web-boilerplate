@@ -7,7 +7,6 @@ import { app as appConfig } from '../../config'
 import locales from '../../locales'
 
 import { actions as NavigationActions, selectors as NavigationSelectors } from './redux'
-import { actions as DrawerMenuActions } from '../DrawerMenu/redux'
 import { actions as I18NActions, selectors as I18NSelectors } from '../I18N/redux'
 
 export function* init() {
@@ -51,7 +50,6 @@ export function* push({ payload }) {
   }
 
   yield put(RouterActions.push(`${prefix}${path}`))
-  yield put(DrawerMenuActions.close())
 }
 
 export function* pop({ payload }) {

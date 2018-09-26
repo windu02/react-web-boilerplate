@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { withI18N } from '../../hoc/withI18N'
+import withI18N from '../../hoc/withI18N'
 
 import styles from './not-found-page.scss'
 
